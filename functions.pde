@@ -1,3 +1,5 @@
+//draws waveform for audio clip provided in argument.
+
 void waveform (AudioPlayer t1) {
   fft = new FFT(t1.bufferSize(), t1.sampleRate());
   background(0);

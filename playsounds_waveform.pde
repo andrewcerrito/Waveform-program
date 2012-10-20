@@ -5,6 +5,7 @@ import ddf.minim.analysis.*;
 Minim minim;
 FFT fft;
 
+
 AudioPlayer i1;
 AudioPlayer i2;
 AudioPlayer i3;
@@ -12,6 +13,7 @@ AudioPlayer i4;
 AudioPlayer i5;
 AudioPlayer i6;
 AudioPlayer i7;
+
 
 boolean done1, done2, done3, done4, done5, done6  = false;
 
@@ -35,7 +37,9 @@ void setup() {
   done1 = true;
 }
 
+
 void draw() {
+  // draw waveform for current sample playing - see keyTyped for boolean info
   waveform(i1);
   if (done1); 
   { 
@@ -64,7 +68,8 @@ void draw() {
 }
 
 
-// when keys are typed, plays sample and then reloads it to be played again.
+// when key is typed, plays sample. Booleans make it so each sample can only
+// be played once and in a specific order.
 void keyTyped () {
   if (done1 == true) {
     if (key == 'w' || key == 'W' ) {
